@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/AguirreProyectos/2026/Portfolio/src/app/loading.tsx"],"sourcesContent":["export default function Loading() {\r\n    return (\r\n        <div style={{\r\n            position: 'fixed',\r\n            inset: 0,\r\n            background: '#050508',\r\n            display: 'flex',\r\n            alignItems: 'center',\r\n            justifyContent: 'center',\r\n        }}>\r\n            <div style={{\r\n                width: 8,\r\n                height: 8,\r\n                borderRadius: '50%',\r\n                background: '#7F77DD',\r\n                animation: 'pulse 1.4s ease-in-out infinite',\r\n            }} />\r\n            <style>{`\r\n        @keyframes pulse {\r\n          0%, 100% { opacity: 0.2; transform: scale(0.8); }\r\n          50%       { opacity: 1;   transform: scale(1.2); }\r\n        }\r\n      `}</style>\r\n        </div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAI,OAAO;YACR,UAAU;YACV,OAAO;YACP,YAAY;YACZ,SAAS;YACT,YAAY;YACZ,gBAAgB;QACpB;;0BACI,8OAAC;gBAAI,OAAO;oBACR,OAAO;oBACP,QAAQ;oBACR,cAAc;oBACd,YAAY;oBACZ,WAAW;gBACf;;;;;;0BACA,8OAAC;0BAAO,CAAC;;;;;MAKf,CAAC;;;;;;;;;;;;AAGP"}}]
-}

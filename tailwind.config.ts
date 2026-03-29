@@ -16,6 +16,12 @@ const config: Config = {
       // fontFamily: {
       //   sans: ['Inter', 'sans-serif'],
       // },
+      colors:{
+        'theme.dark': '#1c1c1c',
+        'theme-light': '#f4f4f4',
+        'sombra-azul': '#1b51da',
+
+      }
     },
   },
   plugins: [],

@@ -70,18 +70,26 @@ export default function ParticleSphere() {
             ctx.arc(32, 32, 28, 0, Math.PI * 2)
             ctx.fillStyle = 'white'
             ctx.fill()
+
+            // --- EL BORDE ---
+            ctx.lineWidth = 8; // Grosor del borde
+            ctx.strokeStyle = '#8fafff'; // Color del borde
+            ctx.stroke();
+
             const texture = new THREE.CanvasTexture(canvas)
             return texture
         }
         const material = new THREE.PointsMaterial({
-            color: 0x7F77DD,
+            color: 0x1b51da,
             size: PARTICLE_SIZE,
             sizeAttenuation: true,
             transparent: true,
             opacity: 0.85,
             depthWrite: false,
             map: createCircleTexture(),
-            alphaTest: 0.5,
+            blending: THREE.AdditiveBlending, 
+            alphaTest: 0.01, // Bajamos el alphaTest para que el brillo suave se vea
+            //alphaTest: 0.5,
         });
 
         const points = new THREE.Points(geometry, material);
@@ -90,11 +98,11 @@ export default function ParticleSphere() {
         // ── Scroll ────────────────────────────────────────────────
         let scrollProgress = 0;
         let targetScroll = 0;
-        const SCROLL_DISTANCE = window.innerHeight * 1.2;
 
         // En mobile usamos el scroll nativo de la página (funciona en iOS también)
         const onScroll = () => {
-            targetScroll = Math.min(1, window.scrollY / SCROLL_DISTANCE);
+            // La esfera desaparece desde el inicio hasta la mitad de la segunda sección
+            targetScroll = Math.min(1, window.scrollY / (window.innerHeight * 1.2));
         };
         window.addEventListener('scroll', onScroll, { passive: true });
 
@@ -193,7 +201,7 @@ export default function ParticleSphere() {
             }
 
             pos.needsUpdate = true;
-            material.opacity = 0.85 - scrollProgress * 0.4;
+            material.opacity = Math.max(0, 0.85 * (1 - scrollProgress));
             material.size = PARTICLE_SIZE + scrollProgress * 0.012;
 
             renderer.render(scene, camera);
@@ -229,7 +237,7 @@ export default function ParticleSphere() {
                 height: '100vh',
                 zIndex: 0,
                 pointerEvents: 'auto',
-                background: '#050508',
+                background: '#1c1c1c',
             }}
         />
     );
