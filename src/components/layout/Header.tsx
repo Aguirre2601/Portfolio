@@ -56,14 +56,12 @@ export default function Header() {
       */}
             <header
                 className={`
-          inline-flex items-center gap-18
-          px-4 py-3 p-10
-          rounded-full
-          border border-zinc-200 dark:border-zinc-700
-          transition-colors duration-300
-          ${scrolled
-                        ? "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm"
-                        : "bg-white/60 dark:bg-zinc-900/60 backdrop-blur-sm"}
+                        inline-flex items-center gap-18
+                        px-4 py-3 p-10
+                        rounded-full
+                        border border-zinc-200 dark:border-zinc-700
+                        transition-colors duration-300
+                        ${scrolled ? "bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm" : "bg-white/60 dark:bg-zinc-900/60 backdrop-blur-sm"}
         `}
             >
                 {/* Logo */}
@@ -73,7 +71,7 @@ export default function Header() {
                 >
                     AG {/* ← reemplazá con tu nombre/logo */}
                 </Link>
- <div className="w-px h-5 bg-zinc-700" />
+                <div className="w-px h-5 bg-zinc-700" />
                 {/* Nav — desktop */}
                 <nav className="hidden md:flex items-center gap-18">
                     {navLinks.map((link) =>

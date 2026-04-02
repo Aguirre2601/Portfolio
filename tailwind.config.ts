@@ -11,20 +11,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Aquí van tus colores, fuentes y tokens de diseño personalizados
+      // Aquí van tus colores, fuentes y tokens de diseño personalizados- plugins
       // Ejemplo:
       // fontFamily: {
       //   sans: ['Inter', 'sans-serif'],
       // },
       colors:{
-        'theme.dark': '#1c1c1c',
-        'theme-light': '#f4f4f4',
-        'sombra-azul': '#1b51da',
-
       }
     },
   },
   plugins: [],
 }
 
-export default config
+export default config;

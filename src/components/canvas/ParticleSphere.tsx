@@ -31,6 +31,10 @@ export default function ParticleSphere() {
         renderer.setClearColor(0x000000, 0);
         mount.appendChild(renderer.domElement);
 
+const style = getComputedStyle(document.body);
+const colorAzul = style.getPropertyValue('--color-blue').trim();
+const colorAzulBrillo = style.getPropertyValue('--color-light-blue').trim();
+
         // ── Partículas ────────────────────────────────────────────
         const positions = new Float32Array(N * 3);
         const origins = new Float32Array(N * 3);
@@ -73,14 +77,14 @@ export default function ParticleSphere() {
 
             // --- EL BORDE ---
             ctx.lineWidth = 8; // Grosor del borde
-            ctx.strokeStyle = '#8fafff'; // Color del borde
+            ctx.strokeStyle = colorAzulBrillo; // Color del borde
             ctx.stroke();
 
             const texture = new THREE.CanvasTexture(canvas)
             return texture
         }
         const material = new THREE.PointsMaterial({
-            color: 0x1b51da,
+            color: colorAzul,
             size: PARTICLE_SIZE,
             sizeAttenuation: true,
             transparent: true,
@@ -237,7 +241,7 @@ export default function ParticleSphere() {
                 height: '100vh',
                 zIndex: 0,
                 pointerEvents: 'auto',
-                background: '#1c1c1c',
+                background: 'transparent',
             }}
         />
     );

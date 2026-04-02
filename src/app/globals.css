@@ -3,9 +3,28 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*box-sizing: border-box;*/
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+@theme {
+  /* Al ponerlos aquí, Tailwind v4 crea automáticamente 
+     las clases bg-main-bg, text-main-text, etc. */
+  --color-main-bg: #1c1c1c;
+  --color-main-text: #f7f7f7;
+  /*ParticleSphere*/
+  --color-light-blue: #8fafff;
+  --color-blue: #1b51da;
+  
+}
+
+/* Configuramos el comportamiento para el modo claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-main-bg: #e0e0de;
+    --color-main-text: #111010;
+  }
 }
