@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: 'Mariela Aguirre — Portfolio',
     description: 'Portfolio personal',
     authors: [{ name: 'Mariela Aguirre', url: 'https://marielaaguirre.com' }],
-    keywords: ['portfolio', 'developer', 'designer', 'builder', 'mariela aguirre'],
+    keywords: ['portfolio', 'developer', 'designer', 'builder', 'mariela aguirre', 'full-stack', 'creative', 'innovative', 'web development', 'software engineering', 'UX/UI design', 'personal projects', 'tech blog'],
     //viewport:{ width: 'device-width', height: 'initial-scale=1.0' }
 }
 

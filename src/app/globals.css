@@ -20,11 +20,15 @@ html {
         --color-main-bg: #1c1c1c;
         --color-main-text: #f7f7f7;
         --color-primary: #6c6c6d83;
-  --color-hover: #cec9c957;
+        --color-hover: #cec9c957;
         --color-border: #e4e4e48c;
         /*ParticleSphere*/
         --color-light-blue: #8fafff;
-        --color-blue: #1b51da;
+        --color-blue: #00A1FF;
+        --color-azul: #0000FF;
+        --color-turquesa:#00A1FF;
+        --color-azul-opaco:#5381E6;
+        --color-purple:#5820C7;
   
 }
 

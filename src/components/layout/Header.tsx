@@ -28,7 +28,7 @@ export default function FloatingHeader() {
             className={`fixed top-6 inset-x-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`} >
             {/* La "Píldora" - Estilo inspirado en los componentes oficiales de Tailwind */}
             <header className=" flex items-center gap-7 px-2 py-1 rounded-full border border-border bg-primary backdrop-blur-md shadow-sm text-main-text">
-                <Link href="/" className="font-bold font-ArraySemiBold text-5xl tracking-tight text-main-text p-2 ml-3" >{/* Logo */}
+                <Link href="/" className="font-bold font-ArraySemiBold text-4xl tracking-tight text-main-text p-2 ml-3" >{/* Logo */}
                     AG
                 </Link>
                 <div className="w-px h-5 bg-border" />
