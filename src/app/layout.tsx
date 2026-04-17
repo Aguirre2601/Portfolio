@@ -2,7 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Header from "@/components/layout/Header";
 import localFont from 'next/font/local';
-import { ThemeProvider } from "@/components/context/ThemeContext";
+import { ThemeProvider } from "@/components/context/ThemeContext"; 
+import { AosProvider } from "@/hooks/AosProvider";
 
 const satoshi = localFont({
     src: './fonts/Satoshi-Regular.woff2',
@@ -48,7 +49,7 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
             <body className="">
                 <ThemeProvider>
                     <Header/>
-                    {children}
+                    <AosProvider children={children} />
                 </ThemeProvider>
             </body>
         </html>

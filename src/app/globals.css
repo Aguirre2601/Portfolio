@@ -29,7 +29,8 @@ html {
         --color-turquesa:#00A1FF;
         --color-azul-opaco:#5381E6;
         --color-purple:#5820C7;
-  
+        
+        
 }
 
 :root:not(.dark) {

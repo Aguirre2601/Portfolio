@@ -9,13 +9,8 @@ type ButtonProps = {
     disabled?: boolean;
 };
 
-export default function Button({
-    children,
-    onClick,
-    type = "button",
-    className = "",
-    disabled = false,
-}: ButtonProps) {
+export default function Button({  children, onClick, type = "button", className = "", disabled = false,}: ButtonProps) 
+{
     return (
         <button
             type={type}
