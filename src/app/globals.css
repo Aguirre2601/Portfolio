@@ -10,9 +10,9 @@ html {
 
 @theme {
     /*Font-------------------------*/
-       --font-satoshi: var(--font-satoshi), ui-sans-serif, system-ui;
-       --font-outfit: var(--font-outfit), sans-serif;
-       --font-ArraySemiBold: var(--font-ArraySemiBold);
+      --font-satoshi: var(--font-satoshi), ui-sans-serif, system-ui;
+      --font-outfit: var(--font-outfit), sans-serif;
+      --font-ArraySemiBold: var(--font-ArraySemiBold);
   /* Al ponerlos aquí, Tailwind v4 crea automáticamente las clases bg-main-bg, text-main-text, etc. */
     /*Color-------------------------*/
         --color-main-bg: #0B0B0B;

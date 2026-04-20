@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState }  from "react";
+import  React from "react";
 import { useTheme } from '@/components/context/ThemeContext';
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/Buttons/ButtonEstrella";
 import { useScrollDirection } from "@/hooks/use-scroll-direction";
 
 interface NavItem {
@@ -14,8 +15,9 @@ interface NavItem {
 const navItems: NavItem[] = [
     { label: "Sobre mí", href: "#", variant: 'link' },
     { label: "Tecnologias", href: "#", variant: 'link' },
-    { label: "Proyectos", href: "#", variant: 'magic' },
+    { label: "Proyectos", href: "#", variant: 'link' },
     { label: "Formación", href: "#", variant: 'link' },
+    { label: "Contactame", href: "#", variant: 'link' },
 ];
 
 export default function FloatingHeader() {
@@ -24,40 +26,39 @@ export default function FloatingHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div
-            className={`fixed top-6 inset-x-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
-
-            {/* ── PÍLDORA PRINCIPAL (idéntica al diseño actual en desktop) ── */}
+        <div className={`fixed top-6 inset-x-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
             <header className="flex items-center gap-7 px-2 py-1 rounded-full border border-border bg-primary backdrop-blur-md shadow-sm ">
-
-                {/* Logo — sin cambios */}
+                
                 <Link href="/" className=" font-outfit text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold ">
                     Aguirre Mariela
                 </Link>
 
                 <div className="w-px h-5 bg-border" />
 
-                {/* Nav links — ocultos en mobile, visibles en md+ */}
                 <nav className="hidden md:flex items-center gap-7">
-                    {navItems.map((item) =>
-                        item.variant === "magic" ? (
-                            <Button key={item.href} className="">
-                                <Link href={item.href}>{item.label}</Link>
-                            </Button>
-                        ) : (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                className="px-3 py-2 text-xl font-light transition-colors rounded-full hover:bg-hover font-outfit  "
-                            >
-                                {item.label}
-                            </Link>
-                        )
-                    )}
-                </nav>
+                    {navItems.map((item, index) => {
+                        const isLast = index === navItems.length - 1;
+                        return (
+                            // Usamos React.Fragment para devolver dos elementos hermanos sin crear un <div> extra
+                            <React.Fragment key={item.label}>
+                                {isLast && <div className="w-px h-5 bg-border" />}
+                                {item.variant === "magic" ? (
+                                    <Button >
+                                        <Link href={item.href}>{item.label}</Link>
+                                    </Button>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        className="px-3 py-2 text-xl font-light transition-colors rounded-full hover:bg-hover font-outfit"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )}
 
-                {/* Separador — solo visible en desktop cuando hay nav */}
-                <div className="hidden md:block w-px h-5 bg-border" />
+                            </React.Fragment>
+                        );
+                    })}
+                </nav>
 
                 {/* Theme toggle — sin cambios 
                 <button
@@ -69,14 +70,6 @@ export default function FloatingHeader() {
                 </button>
 
                 <div className="w-px h-5 bg-border" />*/}
-
-                {/* Contacto — ya tenía hidden md:inline-flex, no se toca */}
-                <Link
-                    href="#contacto"
-                    className="hidden md:inline-flex items-center px-3 py-2 rounded-full bg-olive-200 text-zinc-800 text-xl font-light hover:opacity-80 transition-opacity mr-3 font-outfit"
-                >
-                    Contactame
-                </Link>
 
                 {/* ── HAMBURGUESA — solo visible en mobile ── */}
                 <button
@@ -114,7 +107,6 @@ export default function FloatingHeader() {
                     item.variant === "magic" ? (
                         <Button
                             key={item.href}
-                            className="w-[calc(100%-2rem)] justify-center"
                             onClick={() => setMenuOpen(false)}
                         >
                             <Link href={item.href}>{item.label}</Link>
@@ -130,14 +122,6 @@ export default function FloatingHeader() {
                         </Link>
                     )
                 )}
-                {/* Contacto visible también en el menú mobile */}
-                <Link
-                    href="#contacto"
-                    onClick={() => setMenuOpen(false)}
-                    className="mt-1 px-4 py-3 rounded-xl bg-olive-200 text-zinc-800 text-xl font-light text-center hover:opacity-80 transition-opacity font-outfit "
-                >
-                    Contactame
-                </Link>
             </div>
         </div>
     );

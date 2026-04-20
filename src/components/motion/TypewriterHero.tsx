@@ -2,7 +2,7 @@
 import { useTypewriter } from "@/hooks/use-type-writer";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/Buttons/ButtonMagic";
 
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────

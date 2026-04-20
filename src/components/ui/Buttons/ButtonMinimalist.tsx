@@ -5,14 +5,14 @@ const Button = () => {
   return (
     <StyledWrapper>
       <button className="cta">
-        <span className="hover-underline-animation"> Explora mis trabajos </span>
+        <span className="hover-underline-animation"> Contactame </span>
         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width={30} height={10} viewBox="0 0 46 16">
   <path 
     id="Path_10" 
     data-name="Path 10" 
     d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" 
     transform="translate(30)" 
-    fill="#5820C7" 
+    fill="#A036F3" 
   />
 </svg>
       </button>
@@ -52,7 +52,7 @@ const StyledWrapper = styled.div`
   .cta svg {
     transform: translateX(-8px);
     transition: all 0.3s ease;
-    color: #5820C7;
+    color: #A036F3;
   }
 
   .cta:hover svg {
@@ -77,7 +77,7 @@ const StyledWrapper = styled.div`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #5820C7;
+    background-color: #A036F3;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
