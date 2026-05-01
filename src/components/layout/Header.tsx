@@ -29,13 +29,13 @@ export default function FloatingHeader() {
         <div className={`fixed top-6 inset-x-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
             <header className="flex items-center gap-7 px-2 py-1 rounded-full border border-border bg-primary backdrop-blur-md shadow-sm ">
                 
-                <Link href="/" className=" font-outfit text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold ">
+                <Link href="/" className=" font-satoshi text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold ">
                     Aguirre Mariela
                 </Link>
 
                 <div className="w-px h-5 bg-border" />
 
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden lg:flex items-center gap-6">
                     {navItems.map((item, index) => {
                         const isLast = index === navItems.length - 1;
                         return (
@@ -49,7 +49,7 @@ export default function FloatingHeader() {
                                 ) : (
                                     <Link
                                         href={item.href}
-                                        className="px-3 py-2 text-xl transition-colors rounded-full hover:bg-hover font-satoshi font-normal"
+                                        className="px-3 py-2 text-lg transition-colors rounded-full hover:bg-hover font-satoshi font-normal"
                                     >
                                         {item.label}
                                     </Link>
@@ -76,7 +76,7 @@ export default function FloatingHeader() {
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={menuOpen}
-                    className="md:hidden p-2 mr-3 rounded-full hover:bg-hover transition-colors"
+                    className="lg:hidden p-2 mr-3 rounded-full hover:bg-hover transition-colors"
                 >
                     {/* Icono animado: 3 líneas → X */}
                     <div className="flex flex-col gap-1.5 w-5">
@@ -92,11 +92,11 @@ export default function FloatingHeader() {
             <div
                 className={`
                     absolute top-full mt-3 
-                    w-[calc(100%-3rem)] max-w-sm
+                    w-[calc(100%-3rem)] max-w-lg
                     rounded-2xl border border-border bg-primary backdrop-blur-md shadow-sm
                     flex flex-col items-stretch gap-2 p-1
                     transition-all duration-300 ease-in-out
-                    md:hidden
+                    lg:hidden
                     ${menuOpen
                         ? "opacity-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 -translate-y-2 pointer-events-none"
@@ -116,7 +116,7 @@ export default function FloatingHeader() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMenuOpen(false)}
-                            className="px-4 py-3 text-xl font-light text-center text--mi-gradiente transition-colors rounded-xl hover:bg-hover font-outfit"
+                            className="px-4 py-3 text-lg font-normal text-center text--mi-gradiente transition-colors rounded-full hover:bg-hover font-outfit"
                         >
                             {item.label}
                         </Link>
