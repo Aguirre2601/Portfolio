@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <StyledWrapper>
       <button className="cta">
-        <span className="hover-underline-animation"> Contactame </span>
+        <span className="hover-underline-animation"> Contáctame </span>
         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width={30} height={10} viewBox="0 0 46 16">
   <path 
     id="Path_10" 
