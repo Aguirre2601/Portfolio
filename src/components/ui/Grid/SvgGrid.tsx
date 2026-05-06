@@ -33,7 +33,6 @@ export default function SvgGrid({ images = [] }: SvgGridProps) {
       animation: slideRow 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     .svg-cell {
-      border: 0.5px solid #d1d5db;
       transition:
         transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
         box-shadow 0.25s ease,
@@ -78,28 +77,27 @@ export default function SvgGrid({ images = [] }: SvgGridProps) {
     <>
       <style>{styles}</style>
 
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden mt-6">
         {rows.map((row, rowIndex) => (
           <div
             key={`row-${rowIndex}`}
             className={`grid ${colClass} gap-px svg-row`}
             style={{
               animationDelay: `${rowIndex * 0.1}s`,
-              gap: "1em",
             }}
           >
             {/* Cambiamos 'src' por 'image' para acceder a sus propiedades */}
             {row.map((image) => (
               <div
                 key={image.id} // Usamos el ID del objeto como key
-                className="svg-cell relative flex items-center justify-center bg-transparent rounded-sm overflow-hidden aspect-square"
+                className="svg-cell relative flex items-center justify-center bg-transparent rounded-sm overflow-hidden aspect-square w-15 h-15 m-3"
               >
                 <Image
                   src={image.src} // Ruta desde el objeto
                   alt={image.alt} // Texto alternativo desde el objeto
                   fill // En Next.js, 'fill' es ideal para contenedores con 'aspect-square'
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-                  className="p-4 object-contain pointer-events-none select-none"
+                  sizes="( max-width: 640px ) 50vw, ( max-width: 1024px ) 33vw, ( max-width: 1280px ) 25vw, ( max-width: 1536px ) 20vw, 16.66vw"
+                  className="object-contain"
                   draggable={false}
                 />
               </div>
@@ -109,7 +107,7 @@ export default function SvgGrid({ images = [] }: SvgGridProps) {
               Array.from({ length: columns - row.length }).map((_, i) => (
                 <div
                   key={`empty-${rowIndex}-${i}`}
-                  className="svg-cell bg-gray-50 rounded-sm aspect-square"
+                  className="svg-cell bg-transparent rounded-sm aspect-square  w-15 h-15 m-3"
                 />
               ))}
           </div>

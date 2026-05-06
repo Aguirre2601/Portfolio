@@ -26,7 +26,7 @@ export default function FloatingHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className={`fixed top-6 inset-x-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
+        <div className={`fixed top-6 inset-x-0 z-9 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
             <header className="flex items-center gap-7 px-2 py-1 rounded-full border border-border bg-primary backdrop-blur-md shadow-sm ">
                 
                 <Link href="/" className=" font-satoshi text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold ">
