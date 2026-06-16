@@ -9,7 +9,7 @@ import ButtonEstrella from "@/components/ui/Buttons/ButtonEstrella";
 import ButtonMinimalist from "@/components/ui/Buttons/ButtonMinimalist";
 import ButtonCV from "@/components/ui/Buttons/ButtonCV";
 import Grid from "@/components/ui/Grid/Grid";
-import {RealEstateCard} from "@/components/ui/Cards/RealCard";
+import {TotalCard} from "@/components/ui/Cards/TotalCard";
 
 
 export default function HomePage() {
@@ -63,8 +63,8 @@ export default function HomePage() {
                 <section>
                         <div className="grid" >
                             <div className="row-span-1  rounded-xl p-1 md:p-6 bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 h-125 " data-aos={isMounted ? "fade-up" : undefined}>
-                                <div className="w-90 h-85 z-2  relative">
-                                    <RealEstateCard />
+                                <div className="w-90 h-85 ">
+                                    <TotalCard />
                                 </div>
                             </div>
                         </div>   

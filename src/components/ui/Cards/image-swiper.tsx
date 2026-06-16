@@ -5,7 +5,8 @@ import { motion, useMotionValue } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Cards/button'
+
 
 interface ImageSwiperProps extends React.HTMLAttributes<HTMLDivElement> {
   images: string[]
@@ -27,12 +28,12 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
   return (
     <div
       className={cn(
-        'group aspect-video h-1 w-1 overflow-hidden rounded-lg relative',
+        'group relative aspect-square h-full w-full overflow-hidden rounded-lg pointer-events-auto ',
         className
       )}
       {...props}
     >
-      <div className="absolute inset-0 ">
+      <div className="pointer-events-auto absolute inset-0 z-10">
         {imgIndex > 0 && (
           <div className="absolute left-5 top-1/2 -translate-y-1/2">
             <Button
@@ -47,7 +48,7 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
         )}
         
         {imgIndex < images.length - 1 && (
-          <div className="absolute right-5 top-1/2 -translate-y-1/2">
+          <div className="absolute right-5 top-1/2 -translate-y-1/2 ">
             <Button
               variant="ghost" 
               size="icon"
@@ -81,7 +82,7 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
         }}
         onDragEnd={onDragEnd}
         transition={{ damping: 18, stiffness: 90, type: 'spring', duration: 0.2 }}
-        className=" flex h-full cursor-grab items-center rounded-[inherit] active:cursor-grabbing">
+        className=" flex h-full items-center rounded-[inherit] ">
         {images.map((src, i) => {
           return (
             <motion.div
