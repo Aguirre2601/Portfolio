@@ -12,6 +12,15 @@ import {TotalCard} from "@/components/ui/Cards/TotalCard";
 
 
 import {ImgAtelier} from '@/constants/ImgProjects/ImgAtelier'; 
+import {ImgPronafe} from '@/constants/ImgProjects/ImgPronafe';
+import {ImgISFDT} from '@/constants/ImgProjects/ImgISFDT'; 
+import {ImgClinic} from '@/constants/ImgProjects/ImgClinic'; 
+import {ImgBVSV} from '@/constants/ImgProjects/ImgBVSV'; 
+import {ImgPasteleria} from '@/constants/ImgProjects/ImgPasteleria';
+import {ImgPV} from '@/constants/ImgProjects/ImgPV'; 
+import {ImgPyE} from '@/constants/ImgProjects/ImgP&E'; 
+import {ImgRaices} from '@/constants/ImgProjects/ImgRaices';
+import {ImgTutoBit} from '@/constants/ImgProjects/ImgTutoBit';
 
 
 export default function HomePage() {
@@ -63,8 +72,69 @@ export default function HomePage() {
                 </section> 
 
                 <section>
-                        <div className="grid" >
-                            <div className="row-span-1  rounded-xl p-1 md:p-6 bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 " data-aos={isMounted ? "fade-up" : undefined}>
+                        <div className="" >
+                            <div className="rounded-xl p-1 md:p-6 bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 grid grid-cols-5 gap-8" data-aos={isMounted ? "fade-up" : undefined}>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgClinic} 
+                                    shadow="hover:border hover:border-green-600/50 hover:shadow-lg transition-shadow hover:shadow-green-600/50" 
+                                    textoTitulo="Clinica"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgPronafe} 
+                                    shadow="hover:border hover:border-blue-500/50 hover:shadow-lg transition-shadow hover:shadow-blue-500/50" 
+                                    textoTitulo="PRONAFE"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgISFDT} 
+                                    shadow="hover:border hover:border-sky-800/50 hover:shadow-lg transition-shadow hover:shadow-sky-800/50" 
+                                    textoTitulo="ISFDT"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgPV} 
+                                    shadow="hover:border hover:border-emerald-800/50 hover:shadow-lg transition-shadow hover:shadow-emerald-800/50" 
+                                    textoTitulo="Web Plnaeta Verde"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgTutoBit} 
+                                    shadow="hover:border hover:border-indigo-800/50 hover:shadow-lg transition-shadow hover:shadow-indigo-800/50" 
+                                    textoTitulo="Web TutoBit"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgPasteleria} 
+                                    shadow="hover:border hover:border-orange-500/50 hover:shadow-lg transition-shadow hover:shadow-orange-500/50" 
+                                    textoTitulo="Pasteleria - Un poco dulce"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
                                 <div className="w-90 h-auto ">
                                     <TotalCard 
                                     listaDeImagenes={ImgAtelier} 
@@ -72,6 +142,37 @@ export default function HomePage() {
                                     textoTitulo="Lirios Atelier"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgBVSV} 
+                                    shadow="hover:border hover:border-red-700/50 hover:shadow-lg transition-shadow hover:shadow-red-700/50" 
+                                    textoTitulo="Bomberos Voluntarios San Vicente"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgPyE} 
+                                    shadow="hover:border hover:border-cyan-400/50 hover:shadow-lg transition-shadow hover:shadow-cyan-400/50" 
+                                    textoTitulo="Calculadora de Estadisticas"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    />
+                                </div>
+                                <div className="w-90 h-auto ">
+                                    <TotalCard 
+                                    listaDeImagenes={ImgRaices} 
+                                    shadow="hover:border hover:border-amber-50/50 hover:shadow-lg transition-shadow hover:shadow-amber-50/50" 
+                                    textoTitulo="Calculadora de raíces"
+                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
                             </div>

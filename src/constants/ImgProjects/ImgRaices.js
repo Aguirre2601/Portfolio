@@ -1,2 +1,2 @@
-export const ImgPyE = [
+export const ImgRaices = [
     './projects/Calculador/Calculadora1.png' ]
