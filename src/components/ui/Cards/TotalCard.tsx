@@ -1,6 +1,7 @@
 import { ImageSwiper } from "@/components/ui/Cards/image-swiper";
 import { Card, CardContent, CardHeader, CardTitle } from "./Card";
 import TextoCorto  from "../Buttons/ButtonTextVisible";
+import { p } from "framer-motion/client";
 
 const images = [
     './projects/Atelier/Atelier 1.png',
@@ -26,8 +27,9 @@ export function TotalCard({ listaDeImagenes, shadow, textoTitulo, textoParrafo1,
             </CardContent>
             <CardHeader>
                 <CardTitle className="text-lg font-semibold">{textoTitulo}</CardTitle>
-                <TextoCorto texto={textoParrafo1} limite={100} />
-                <p className="mt-1"> <span className="font-semibold">STACK</span> </p>
+                { textoParrafo1.length >= 150 ?
+                ( <TextoCorto texto={textoParrafo1} limite={145} /> ) : (<p>{textoParrafo1}</p>)}
+                <p className="mt-1"> <span className="font-bold">STACK</span> </p>
                 <p> {textoParrafo2} </p>
                 {GitHub && (
                     <div className="relative size-12 left-65" >
