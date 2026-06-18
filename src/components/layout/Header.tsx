@@ -48,7 +48,7 @@ export default function FloatingHeader() {
                                 ) : (
                                     <Link
                                         href={item.href}
-                                        className="px-3 py-2 text-lg transition-colors rounded-full hover:bg-hover font-satoshi font-normal"
+                                        className="px-3 py-2 text-lg transition-colors rounded-full hover:bg-hover font-satoshi"
                                     >
                                         {item.label}
                                     </Link>

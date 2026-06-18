@@ -14,6 +14,9 @@ export const ImgTools = [
     {id: 13, src:'./Tools/prisma_dark.svg', alt:'Prisma'},
     {id: 14, src:'./Tools/SISS.svg', alt:'SISS'},
     {id: 15, src:'./Tools/trello.svg', alt:'Trello'},
+    {id: 17, src:'./Tools/visual-studio.svg', alt:'Visual Studio'},
+    {id: 18, src:'./Tools/vscode.svg', alt:'VSCode'},
+    {id: 19, src:'./Tools/supabase.svg', alt:'Supabase'},
     
     {id: 17, src:'./Frameworks/laravel.svg', alt:'Laravel'},
     {id: 18, src:'./Frameworks/nestjs.svg', alt:'NestJS'},

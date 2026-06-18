@@ -71,7 +71,7 @@ export default function HomePage() {
                     </div>
                 </section> 
 
-                <section>
+                <section className="flex items-center justify-center m-3" id="Proyectos">
                         <div className="" >
                             <div className="rounded-xl p-1 md:p-6 bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 grid grid-cols-5 gap-8" data-aos={isMounted ? "fade-up" : undefined}>
                                 <div className="w-90 h-auto ">
@@ -79,9 +79,9 @@ export default function HomePage() {
                                     listaDeImagenes={ImgClinic} 
                                     shadow="hover:border hover:border-green-600/50 hover:shadow-lg transition-shadow hover:shadow-green-600/50" 
                                     textoTitulo="Clinica"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
-                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    textoParrafo1="Aplicación web médica desarrollada de forma colaborativa. Implementa la gestión integral (CRUD) de turnos, médicos y pacientes. La solución utiliza React y Tailwind CSS en el client-side, conectándose mediante una API REST a un ecosistema de Supabase, el cual administra la base de datos relacional y el ciclo de vida de la autenticación de usuarios."
+                                    textoParrafo2= "React | Tailwind CSS | Supabase | PostgreSQL"
+                                    GitHub={false}
                                     />
                                 </div>
                                 <div className="w-90 h-auto ">
@@ -89,8 +89,9 @@ export default function HomePage() {
                                     listaDeImagenes={ImgPronafe} 
                                     shadow="hover:border hover:border-blue-500/50 hover:shadow-lg transition-shadow hover:shadow-blue-500/50" 
                                     textoTitulo="PRONAFE"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    textoParrafo1="Desarrolladora Full Stack en proyecto colaborativo para PRONAFE Argentina. Diseñé e implementé de forma integral el módulo de auditoría y reportes estadísticos de formularios. Alcance técnico: En la capa de backend, programé los modelos, rutas y controladores para el procesamiento y persistencia de estados de aprobación. En la capa frontend, desarrollé las vistas de usuario, integrando grillas dinámicas de datos y componentes gráficos interactivos para el análisis visual de las métricas."
+                                    textoParrafo2="Laravel | TypeScript | Tailwind CSS | React| PHP | MySQL"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -101,6 +102,7 @@ export default function HomePage() {
                                     textoTitulo="ISFDT"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -111,6 +113,7 @@ export default function HomePage() {
                                     textoTitulo="Web Plnaeta Verde"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -122,6 +125,7 @@ export default function HomePage() {
                                     textoTitulo="Web TutoBit"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -132,6 +136,7 @@ export default function HomePage() {
                                     textoTitulo="Pasteleria - Un poco dulce"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -142,6 +147,7 @@ export default function HomePage() {
                                     textoTitulo="Lirios Atelier"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -152,6 +158,7 @@ export default function HomePage() {
                                     textoTitulo="Bomberos Voluntarios San Vicente"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -162,6 +169,7 @@ export default function HomePage() {
                                     textoTitulo="Calculadora de Estadisticas"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -172,6 +180,7 @@ export default function HomePage() {
                                     textoTitulo="Calculadora de raíces"
                                     textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
