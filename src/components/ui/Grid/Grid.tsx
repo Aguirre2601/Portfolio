@@ -35,7 +35,7 @@ export default function Grid() {
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6">
                     {ImgFrontend.map((img, index) => (
                         <div key={index} className="w-4 h-4 m-1 md:w-16 md:h-16 md:m-3" >
-                            <img src={img.src} alt={img.alt} className="w-full h-full object-contain" />
+                            <img loading="lazy" src={img.src} alt={img.alt} className="w-full h-full object-contain" />
                         </div>
                     ))}
                 </div>
@@ -50,7 +50,7 @@ export default function Grid() {
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6 ">
                     {ImgBackend.map((img, index) => (
                         <div key={index} className="w-4 h-4 m-1 md:w-16 md:h-16 md:m-3 " >
-                            <img src={img.src} alt={img.alt} className="w-full h-full object-contain" />
+                            <img loading="lazy" src={img.src} alt={img.alt} className="w-full h-full object-contain" />
                         </div>
                     ))}
                 </div>
@@ -61,7 +61,7 @@ export default function Grid() {
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6">
                     {ImgTools.map((img, index) => (
                     <div key={index} className="w-4 h-4 m-1 md:w-16 md:h-16 md:m-3  " >
-                            <img src={img.src} alt={img.alt} className="w-full h-full object-contain " />
+                            <img  loading="lazy" src={img.src} alt={img.alt} className="w-full h-full object-contain " />
                         </div>
                     ))}
                 </div>
