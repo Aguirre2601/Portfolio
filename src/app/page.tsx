@@ -111,21 +111,20 @@ export default function HomePage() {
                                     shadow="hover:border hover:border-emerald-800/50 hover:shadow-lg transition-shadow hover:shadow-emerald-800/50" 
                                     textoTitulo="Web Plnaeta Verde"
                                     textoParrafo1="Desarrollo individual de un portal web informativo para una ONG ambientalista. Proyecto diseñado bajo los criterios de UX/UI y diseño adaptativo (responsive design). Implementé la maquetación semántica del sitio, la lógica de interactividad mediante JavaScript y la integración de complementos visuales dinámicos para maximizar el engagement y la usabilidad de la plataforma."
-                                    textoParrafo2="CSS | HTML | JS | Boostrap | plugins"
+                                    textoParrafo2="CSS3 | HTML5 | JS | Boostrap | plugins"
                                     GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/PlanetaVerde-Boostrap_CSS_HTML_PLUINGS"
                                     />
                                 </div>
-                                
                                 <div className="w-90 h-auto ">
                                     <TotalCard 
                                     listaDeImagenes={ImgTutoBit} 
                                     shadow="hover:border hover:border-indigo-800/50 hover:shadow-lg transition-shadow hover:shadow-indigo-800/50" 
                                     textoTitulo="Web TutoBit"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    textoParrafo1="TutoBit es una plataforma web interactiva que simula la interfaz de un agente virtual especializado en tutorías de programación. El proyecto fue desarrollado priorizando un diseño limpio, accesible y centrado en el usuario mediante las siguientes prácticas: A11y, Affordance, Diseño Responsivo y Modo Oscuro/Claro"
+                                    textoParrafo2="HTML5 | CSS3 | JS "
                                     GitHub={true}
-                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    linkGitHub="https://github.com/Aguirre2601/BIT-tutOnline"
                                     />
                                 </div>
                                 <div className="w-90 h-auto ">
@@ -133,10 +132,10 @@ export default function HomePage() {
                                     listaDeImagenes={ImgPasteleria} 
                                     shadow="hover:border hover:border-orange-500/50 hover:shadow-lg transition-shadow hover:shadow-orange-500/50" 
                                     textoTitulo="Pasteleria - Un poco dulce"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    textoParrafo1="Aplicación web estática enfocada en rendimiento y accesibilidad. Implementa Responsive Web Design mediante layouts flexibles y la configuración estratégica de breakpoints con Media Queries para una adaptabilidad total. Integra de forma eficiente herramientas de terceros, incluyendo la optimización tipográfica con Google Fonts y la geolocalización interactiva con la API de Google Maps, aplicando buenas prácticas de renderizado y consistencia visual cross-browser."
+                                    textoParrafo2="HTML5|  CSS3 |  Google Maps Platform API"
                                     GitHub={true}
-                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    linkGitHub="https://github.com/Aguirre2601/pasteleria-CSS-HTML-2"
                                     />
                                 </div>
                                 <div className="w-90 h-auto ">
@@ -144,7 +143,7 @@ export default function HomePage() {
                                     listaDeImagenes={ImgAtelier} 
                                     shadow="hover:border hover:border-lime-500/50 hover:shadow-lg transition-shadow hover:shadow-lime-500/50" 
                                     textoTitulo="Lirios Atelier"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
+                                    textoParrafo1="Sistema de escritorio ERP desarrollado de extremo a extremo (End-to-End) para el control de stock y cuentas corrientes de clientes y proveedores. Implementa una arquitectura de software en 3 capas utilizando C# y .NET. Fui responsable del ciclo completo del proyecto: modelado y normalización de la base de datos relacional en SQL Server, persistencia y abstracción de datos mediante Entity Framework (ORM), y el diseño e implementación de la interfaz de usuario en WPF, aplicando principios avanzados de UI/UX para optimizar la productividad operativa."
                                     textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
                                     GitHub={true}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
@@ -155,9 +154,9 @@ export default function HomePage() {
                                     listaDeImagenes={ImgBVSV} 
                                     shadow="hover:border hover:border-red-700/50 hover:shadow-lg transition-shadow hover:shadow-red-700/50" 
                                     textoTitulo="Bomberos Voluntarios San Vicente"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
-                                    GitHub={true}
+                                    textoParrafo1="Aplicación colaborativa para auditoría de presentismo. Diseñé y normalicé la base de datos relacional, programando queries para métricas de asistencia y exportación a .xlsx. En el frontend, lideré el ciclo de diseño UI/UX mediante mockups, el desarrollo de la interfaz final y la redacción de la documentación técnica, asegurando un producto escalable para entornos operativos de alta exigencia."
+                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF | miro"
+                                    GitHub={false}
                                     linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
                                     />
                                 </div>
@@ -166,10 +165,10 @@ export default function HomePage() {
                                     listaDeImagenes={ImgPyE} 
                                     shadow="hover:border hover:border-cyan-400/50 hover:shadow-lg transition-shadow hover:shadow-cyan-400/50" 
                                     textoTitulo="Calculadora de Estadisticas"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    textoParrafo1="Aplicación de escritorio desarrollada individualmente en C# y .NET para el procesamiento cuantitativo de datos. Fui responsable de la arquitectura integral del software, desde la lógica matemática para el ordenamiento y cálculo de frecuencias, hasta la capa de presentación que genera gráficas estadísticas interactivas para el análisis visual de las distribuciones."
+                                    textoParrafo2="C# | .NET"
                                     GitHub={true}
-                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    linkGitHub="https://github.com/Aguirre2601/Estadistica"
                                     />
                                 </div>
                                 <div className="w-90 h-auto ">
@@ -177,10 +176,10 @@ export default function HomePage() {
                                     listaDeImagenes={ImgRaices} 
                                     shadow="hover:border hover:border-amber-50/50 hover:shadow-lg transition-shadow hover:shadow-amber-50/50" 
                                     textoTitulo="Calculadora de raíces"
-                                    textoParrafo1="Desarrollada en .NET Lirios atelier es una Desktop Applications que funciona como un CRUD de clientes, productos y ventas."
-                                    textoParrafo2="C# | .NET | SQL Server | Entity Framework | WPF"
+                                    textoParrafo1="Software de escritorio desarrollado individualmente en C# y .NET especializado en la resolución algorítmica de raíces polinómicas mediante la regla de Ruffini. El sistema fue estructurado bajo un patrón de diseño arquitectónico en capas para garantizar la separación de responsabilidades."
+                                    textoParrafo2="C# | .NET"
                                     GitHub={true}
-                                    linkGitHub="https://github.com/Aguirre2601/Lirios-Atelier"
+                                    linkGitHub="https://github.com/Aguirre2601/Calculadora-Ruffini"
                                     />
                                 </div>
                             </div>
