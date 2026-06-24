@@ -10,6 +10,8 @@ import ButtonCV from "@/components/ui/Buttons/ButtonCV";
 import Grid from "@/components/ui/Grid/Grid";
 import {TotalCard} from "@/components/ui/Cards/TotalCard";
 
+import GlowText from '@/components/ui/GlowText';
+
 
 import {ImgAtelier} from '@/constants/ImgProjects/ImgAtelier'; 
 import {ImgPronafe} from '@/constants/ImgProjects/ImgPronafe';
@@ -46,11 +48,10 @@ export default function HomePage() {
         <>
             <ParticleSphere />{/* Fondo 3D fijo — detrás de todo */} <ButtonCV />{/* Botón de descarga de CV — siempre visible */}
             <main className="relative z-3 pointer-events-none ">
-                
                 <section className="h-screen flex flex-col items-center justify-center text-center px-8" id="home">
                     <TypewriterHero classname="text-purple font-ArraySemiBold "></TypewriterHero>
-
                 </section>
+
                 <section className="flex flex-col items-center justify-center text-center md:px-8 mt-20  backdrop-blur-xs" id="Services">
                     <div className='md:px-12 lg:px-24 tracking-tight relative'>
                         <div className='flex flex-col items-center text-center mb-3 md:mb-16 '>
@@ -66,15 +67,16 @@ export default function HomePage() {
                         </div>
                     </div>
                 </section> 
-                <section className="flex items-center justify-center">
-                    <div className='md:pt-40 px-6 md:px-12 lg:px-24 relative z-2' id="Sobre mí">
+
+                <section className="flex items-center justify-center" id='who is me'>
+                    <div className='md:pt-40 px-6 md:px-12 lg:px-24 relative z-2'>
                         <Grid/>
                     </div>
                 </section>
-             
 
-                <section className="flex items-center justify-center m-3" id="Proyectos">
-                    <div className="rounded-xl bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 grid 
+                <section className=" items-center justify-center m-3 mt-50" id="projects">
+                    <h2 className='text-xl md:text-5xl text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200 font-satoshi  p-10 text-center font-bold'> Proyectos</h2>
+                    <div className=" rounded-xl bg-linear-65 to-mauve-950 from-neutral-900 border-xl border-neutral-800 grid 
                     grid-cols-2 gap-1 p-0.5
                     sm:grid-cols-3 sm:gap-1.3 sm:p-1 
                     md:grid-cols-3 md:gap-3 md:p-3 
@@ -190,14 +192,15 @@ export default function HomePage() {
                         </div>
                     </div>  
                 </section> 
+
                 <section className="h-screen flex items-center justify-center">
-                    <h2 className="text-3xl font-light opacity-70">Proyectos</h2>
+                    <h2 className="text-3xl font-light opacity-70">Formacion</h2>
                 </section>
                 <section className="h-screen flex items-center justify-center">
                     <h2 className="text-3xl font-light opacity-70">Contacto</h2>
                 </section>
                 <section className="h-screen flex items-center justify-center">
-                    <h2 className="text-3xl font-light opacity-70">Sobre mí 3</h2>
+                    <h2 className="text-3xl font-light opacity-70">footer</h2>
                 </section>
 
             </main>
