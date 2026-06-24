@@ -17,8 +17,11 @@ export const ImgTools = [
     {id: 17, src:'./Tools/visual-studio.svg', alt:'Visual Studio'},
     {id: 18, src:'./Tools/vscode.svg', alt:'VSCode'},
     {id: 19, src:'./Tools/supabase.svg', alt:'Supabase'},
-    
+
     {id: 17, src:'./Frameworks/laravel.svg', alt:'Laravel'},
     {id: 18, src:'./Frameworks/nestjs.svg', alt:'NestJS'},
     {id: 19, src:'./Frameworks/nextjs_icon_dark.svg', alt:'NextJS'},
+    {id: 20 , src: './Tools/microsoft-excel.svg', alt: 'Microsoft Excel'},
+
+    
 ];
