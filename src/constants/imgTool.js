@@ -7,7 +7,7 @@ export const ImgTool = [
     {id: 6, src:'./Tools/github_dark.svg', alt:'GitHub'},
     {id: 7, src:'./Tools/gitlab.svg', alt:'GitLab'},
     {id: 8, src:'./Tools/google_ads-icon.svg', alt:'Google Ads'},
-
+    {id: 9, src:'./Tools/Google_Colaboratory (1).svg', alt:'Google Colaboratory'},
     {id: 10, src:'./Tools/kubernetes.svg', alt:'Kubernetes'},
     {id: 11, src:'./Tools/motion_dark.svg', alt:'Motion'},
     {id: 12, src:'./Tools/npm-wordmark.svg', alt:'npm'},
