@@ -24,7 +24,7 @@ const satoshi = localFont({
 })
 
 const ArraySemiBold = localFont({
-    src: './fonts/Array-SemiBold.woff2',
+    src: './fonts/Array-Semibold.woff2',
     variable: '--font-ArraySemiBold',
     display: 'swap', 
 })
