@@ -7,7 +7,7 @@ export const ImgTool = [
     {id: 6, src:'./Tools/github_dark.svg', alt:'GitHub'},
     {id: 7, src:'./Tools/gitlab.svg', alt:'GitLab'},
     {id: 8, src:'./Tools/google_ads-icon.svg', alt:'Google Ads'},
-    {id: 9, src:'./Tools/Google_Colaboratory (1).svg', alt:'Google Colaboratory'},
+
     {id: 10, src:'./Tools/kubernetes.svg', alt:'Kubernetes'},
     {id: 11, src:'./Tools/motion_dark.svg', alt:'Motion'},
     {id: 12, src:'./Tools/npm-wordmark.svg', alt:'npm'},
@@ -17,12 +17,10 @@ export const ImgTool = [
     {id: 17, src:'./Tools/visual-studio.svg', alt:'Visual Studio'},
     {id: 18, src:'./Tools/vscode.svg', alt:'VSCode'},
     {id: 19, src:'./Tools/supabase.svg', alt:'Supabase'},
-
     {id: 17, src:'./Frameworks/laravel.svg', alt:'Laravel'},
     {id: 18, src:'./Frameworks/nestjs.svg', alt:'NestJS'},
     {id: 19, src:'./Frameworks/nextjs_icon_dark.svg', alt:'NextJS'},
     {id: 20 , src: './Tools/microsoft-excel.svg', alt: 'Microsoft Excel'},
-
     {id: 25, src:'./Tools/Semrush.svg', alt:'Semrush'},
     {id: 26, src:'./Tools/Ubersuggest.svg', alt:'Ubersuggest'},
 
