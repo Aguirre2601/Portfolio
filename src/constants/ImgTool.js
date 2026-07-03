@@ -23,6 +23,7 @@ export const ImgTool = [
     {id: 20 , src: './Tools/microsoft-excel.svg', alt: 'Microsoft Excel'},
     {id: 25, src:'./Tools/Semrush.svg', alt:'Semrush'},
     {id: 26, src:'./Tools/Ubersuggest.svg', alt:'Ubersuggest'},
+    {id: 27, src:'./Tools/azure-power-bi.svg', alt:'Azure Power BI'},
 
     
 ];
