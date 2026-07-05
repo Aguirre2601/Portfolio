@@ -27,20 +27,20 @@ export default function FloatingHeader() {
 
     return (
         <div className={`fixed top-6 inset-x-0 z-9 flex justify-center transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0"}`}>
-            <header className="flex items-center gap-7 px-2 py-1  shadow-sm border border-gray-700 rounded-lg  bg-black/50 backdrop-blur-sm ">
+            <header className="flex items-center gap-7 px-2 py-1  shadow-sm border border-gray-700 rounded-xl  bg-black/50 backdrop-blur-sm ">
                 
-                <Link href="/" className=" font-satoshi text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold ">
+                <Link href="/" className=" text-2xl tracking-tight p-2 ml-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-200  font-bold font-satoshi ">
                     Aguirre Mariela
                 </Link>
 
-                <div className="w-px h-5 bg-border" />
+                <div className="w-px h-5 bg-gray-700" />
 
                 <nav className="hidden lg:flex items-center gap-6">
                     {navItems.map((item, index) => {
                         const isLast = index === navItems.length - 1;
                         return (
                             <React.Fragment key={item.label}>
-                                {isLast && <div className="w-px h-5 bg-border" />}
+                                {isLast && <div className="w-px h-5 bg-gray-700" />}
                                 {item.variant === "magic" ? (
                                     <Button >
                                         <Link href={item.href}>{item.label}</Link>
@@ -48,7 +48,7 @@ export default function FloatingHeader() {
                                 ) : (
                                     <Link
                                         href={item.href}
-                                        className="px-3 py-2 text-lg transition-colors rounded-full hover:underline hover:underline-offset-8 hover:decoration-purple-500 hover:decoration-2 font-satoshi"
+                                        className="px-3 py-2 text-lg transition-colors rounded-xl hover:underline hover:underline-offset-8 hover:decoration-purple-600 hover:decoration-2 font-satoshi"
                                     >
                                         {item.label}
                                     </Link>
@@ -75,7 +75,7 @@ export default function FloatingHeader() {
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={menuOpen}
-                    className="lg:hidden p-2 mr-3 rounded-full hover:bg-hover transition-colors"
+                    className="lg:hidden p-2 mr-3 hover:underline hover:underline-offset-8 hover:decoration-purple-600 hover:decoration-2 font-satoshi"
                 >
                     {/* Icono animado: 3 líneas → X */}
                     <div className="flex flex-col gap-1.5 w-5">
@@ -92,7 +92,7 @@ export default function FloatingHeader() {
                 className={`
                     absolute top-full mt-3 
                     w-[calc(100%-3rem)] max-w-lg
-                    rounded-2xl border border-border bg-primary backdrop-blur-md shadow-sm
+                    shadow-sm border border-gray-700 rounded-xl  bg-black/50 backdrop-blur-sm 
                     flex flex-col items-stretch gap-2 p-1
                     transition-all duration-300 ease-in-out
                     lg:hidden
@@ -115,7 +115,7 @@ export default function FloatingHeader() {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMenuOpen(false)}
-                            className="px-4 py-3 text-lg font-normal text-center text--mi-gradiente transition-colors rounded-full hover:bg-hover font-outfit"
+                            className="px-4 py-3 text-lg font-normal text-center text--mi-gradiente  rounded-xl font-satoshi  hover:underline hover:underline-offset-8 hover:decoration-purple-600 hover:decoration-2 "
                         >
                             {item.label}
                         </Link>

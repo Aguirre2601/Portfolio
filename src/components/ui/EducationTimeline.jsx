@@ -44,10 +44,9 @@ export default function EducationTimeline() {
   return (
     <section 
       ref={containerRef} 
-      className="relative max-w-4xl mx-auto px-4 py-24 bg-black text-white min-h-screen"
+      className="relative max-w-4xl mx-auto px-4 py-24 bg-black text-white min-h-screen "
     >
-      {/* Título de la sección usando tu fuente geométrica */}
-      <h2 className="font-ArraySemiBold   md:text-6xl text-center mb-20 uppercase tracking-wider text-lg   text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100  p-5 font-bold  ">
+      <h2 className="font-ArraySemiBold  mb-20 uppercase tracking-wider    text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100   font-bold text-4xl md:text-6xl p-6 text-center  ">
         Mi Formación
       </h2>
 
@@ -76,13 +75,13 @@ export default function EducationTimeline() {
               >
                 {/* Bloque del contenido de la tarjeta */}
                 <motion.div 
-                  className="w-full md:w-2/5 pl-12 md:pl-0 md:px-8"
+                  className="w-90% md:w-2/5 pl-12 md:pl-0 md:px-8"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  <div className="bg-neutral-900/50 border border-neutral-800 p-6 rounded-2xl backdrop-blur-sm hover:border-neutral-700 transition-colors">
+                  <div className=" hover:border-neutral-700 transition-colors  p-4 md:p-6 bg-black/50 backdrop-blur-sm border border-gray-700 rounded-xl">
                     {/* Año resaltado con tu fuente principal */}
                     <span className="font-ArraySemiBold text-xl text-neutral-400 block mb-2">
                       {item.year}

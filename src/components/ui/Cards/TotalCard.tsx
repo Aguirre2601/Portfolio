@@ -14,7 +14,7 @@ interface GaleriaProps {
 
 export function TotalCard({ listaDeImagenes, shadow, textoTitulo, textoParrafo1, textoParrafo2, GitHub, linkGitHub }: GaleriaProps) {
     return (
-        <Card className={`w-max-100 sm:w-max-200 md:w-max-200 lg:w-max-400 bg-linear-65 from-mauve-950 to-neutral-900 border border-neutral-800   ${shadow}`}>
+        <Card className={`w-max-100 sm:w-max-200 md:w-max-200 lg:w-max-400  border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm "  ${shadow}`}>
             <CardContent className="p-0 ">
                 <ImageSwiper images={listaDeImagenes} className="w-full h-full" />
             </CardContent>

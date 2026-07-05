@@ -13,6 +13,7 @@ import {TotalCard} from "@/components/ui/Cards/TotalCard";
 import GlowText from '@/components/ui/Title/GlowText';
 
 import MotionStudio from '@/components/ui/Title/MotionStudio';
+import MagicCard from "@/components/ui/cardmagic";
 
 import {ImgAtelier} from '@/constants/ImgProjects/ImgAtelier'; 
 import {ImgPronafe} from '@/constants/ImgProjects/ImgPronafe';
@@ -55,9 +56,9 @@ export default function HomePage() {
                 </section>
 
                 <section className="flex flex-col items-center justify-center text-center md:px-8 mt-20  backdrop-blur-xs" id="Services">
-                    <div className='md:px-12 lg:px-24 tracking-tight relative'>
+                    <div className='md:px-12 lg:px-24 px-9 tracking-tight relative'>
                         <div className='flex flex-col items-center text-center mb-3 md:mb-16 '>
-                            <h2 className='text-lg md:text-5xl text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-100 font-satoshi  p-4 font-bold' data-aos={isMounted ? "fade-up" : undefined}>¿Buscas un perfil profesional que no genere deuda técnica?</h2>
+                            <h2 className=' text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-100 font-ArraySemiBold font-bold text-4xl md:text-6xl p-6 text-center' data-aos={isMounted ? "fade-up" : undefined}>¿Buscas un perfil profesional que no genere deuda técnica?</h2>
                             <p className="tracking-widest font-satoshi  font-light   text-xs md:text-xl mt-1 md:mt-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-300 to-gray-100 " data-aos={isMounted ? "fade-up" : undefined}> <a className="underline decoration-red-500">La eficiencia no está solo en que el código funcione</a>, sino en que sea legible y escalable.
                             </p>
                             <p className="tracking-widest font-satoshi  font-light text-xs md:text-xl mt-1  md:mt-3 text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-300 to-gray-100   " data-aos={isMounted ? "fade-up" : undefined}>Uso estándares de <a className="underline decoration-violet-700">Clean Code</a> y principios <a className="underline decoration-sky-500">S.O.L.I.D</a> para facilitar el mantenimiento y la integridad de mis proyectos. Mi meta es ser el soporte que ayude al líder a escalar el proyecto <a className="underline decoration-lime-400">sin fricciones técnicas</a>.</p>
@@ -68,17 +69,17 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
-                </section> 
+                </section>
 
                 <section className="flex items-center justify-center" id='who is me'>
-                    <div className=' px-6 md:px-12 lg:px-24 relative z-2'>
+                    <div className='px-6 md:px-12 lg:px-24 relative z-2'>
                         <Grid/>
                     </div>
                 </section>
 
                 <section className="items-center justify-center bg-linear-to-b from-transparent to-black" id="projects">
                     <MotionStudio /> 
-                    <h2 className='text-lg md:text-6xl text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100 font-satoshi p-5 font-bold text-center ' data-aos={isMounted ? "fade-up" : undefined}>  <span className="  ml-2 font-ArraySemiBold">EXPLORA MIS PROYECTOS</span></h2>
+                    <h2 className='text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100 font-satoshi font-bold text-4xl md:text-6xl p-6 text-center mb-14 ' data-aos={isMounted ? "fade-up" : undefined}>  <span className="font-ArraySemiBold">EXPLORA MIS PROYECTOS</span></h2>
                     <div className="  grid 
                     grid-cols-2 gap-1 p-0.5
                     sm:grid-cols-3 sm:gap-1.3 sm:p-1 
@@ -196,24 +197,20 @@ export default function HomePage() {
                     </div>  
                 </section> 
 
-                <section className="items-center justify-center bg-black" id="education">
+                <section className="flex items-center justify-center bg-black" id="education ">
                     <EducationTimeline />
                 </section>
 
-                <section  className="relative min-h-screen bg-cover bg-center flex flex-col justify-center items-center px-4 md:bg-fixed"
-                style={{ backgroundImage: "url('/pexels-mahmoudramadan-31622908.jpg')" }} id="contact"
-                > 
-                    {/* Contenido flotante */}
-                    <div className="relative z-10 text-center max-w-xl text-white border border-gray-700 rounded-lg p-6 md:p-12 bg-black/50 backdrop-blur-sm">
-                    <h2 className="text-4xl font-bold mb-4 tracking-tight" data-aos={isMounted ? "fade-up" : undefined}>
-                        Contactame 
-                    </h2>
-                    <p className="text-lg text-slate-300" data-aos={isMounted ? "fade-up" : undefined}>
-                        Detrás de cada pantalla hay una estructura al detalle. Explora la lógica limpia y tecnologías que uso para crear sistemas eficientes. ¡Mira mi código!
-                    </p>
-                    </div>
+                <section
+                    className="relative z-2 bg-cover bg-center bg-no-repeat h-screen"
+                    style={{ backgroundImage: "url('/pexels-mahmoudramadan-31622908.jpg')" }}
+                    id="Contacto"
+                >
+                    <MagicCard />
                 </section>
-            
+
+
+
             </main>
         </>
     );
