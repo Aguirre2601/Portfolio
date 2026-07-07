@@ -49,7 +49,7 @@ export default function RootLayout({children,}: { children: React.ReactNode }) {
                 </head>
                 <ThemeProvider>
                     <Header/>
-                    <AosProvider children={children} />
+                        <AosProvider children={children} />
                     <Footer/>
                 </ThemeProvider>
             </body>

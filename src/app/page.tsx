@@ -28,6 +28,7 @@ import {ImgJobs} from '@/constants/ImgJobs';
 
 import EducationTimeline from '@/components/ui/EducationTimeline';  
 import MiSeccionContacto from "@/components/ui/Buttons/MiSeccionContacto";
+import ContactForm from "@/components/ui/Forms/ContactForm";
 
 export default function HomePage() {
     const [isMounted, setIsMounted] = useState(false);
@@ -245,32 +246,36 @@ export default function HomePage() {
                             <MiSeccionContacto/>
                         </div>
 
+                        
                         <div className="gap-4 relative z-8 md:col-span-2 flex flex-col justify-start items-center border border-gray-700 rounded-xl bg-black/50 backdrop-blur-lg p-6 md:p-12 m-5 md:m-10 ">
                             <h2 className="text-4xl tracking-tight text-transparent bg-clip-text bg-linear-to-br from-gray-100 via-gray-400 to-gray-100 font-ArraySemiBold font-bold mb-2"  >
                                 Email
                             </h2> 
-                            <input 
-                            type="text" 
-                            placeholder="Your full name here." 
-                            className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full "
-                            />
+                            {/*
+                            <form action="https://formspree.io/f/xwvdjvwz" method="POST">
+                                <input 
+                                    name="name"
+                                    type="text" 
+                                    placeholder="Your full name here." 
+                                    className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full " required 
+                                />
 
-                            
-                            <input 
-                            type="email" 
-                            placeholder="Your email here." 
-                            className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full "
-                            />
+                                <input 
+                                    name="email"
+                                    type="email" 
+                                    placeholder="Your email here." 
+                                    className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full " required 
+                                />
 
-                            
-                            <textarea  
-                                placeholder="Your message here." 
-                                rows={5} // Define la altura inicial en líneas de texto
-                                className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full resize-none"
-                            />
-
-                            <a href=""><ButtonMinimalist /></a>
-
+                                <textarea  
+                                    name="message"
+                                    placeholder="Your message here." 
+                                    rows={5} // Define la altura inicial en líneas de texto
+                                    className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600  transition-colors relative z-12 pointer-events-auto w-full resize-none" required 
+                                />
+                                <button type="submit"><ButtonMinimalist /></button> 
+                            </form>*/}
+                            <ContactForm/>
                         </div>
                     </div>
                 </section>  
