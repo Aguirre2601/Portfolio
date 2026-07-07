@@ -55,7 +55,7 @@ export default function EducationTimeline() {
   return (
     <section 
       ref={containerRef} 
-      className="relative max-w-4xl mx-auto px-4 py-24 bg-black text-white min-h-screen "
+      className="relative max-w-4xl mx-auto px-4 py-16 bg-black text-white min-h-screen "
     >
       <h2 className="font-ArraySemiBold  mb-20 uppercase tracking-wider    text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100   font-bold text-4xl md:text-6xl p-6 text-center  ">
         Mi Formación
@@ -67,12 +67,12 @@ export default function EducationTimeline() {
 
         {/* LÍNEA DE PROGRESO (Blanca, se llena con el scroll) */}
         <motion.div 
-          className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-purple-600 rounded-full origin-top"
+          className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-2  rounded-full origin-top   bg-linear-to-t from-purple-500 from-5% via-violet-800 via-45% to-violet-950 to-90%"
           style={{ scaleY }}
         />
 
         {/* CONTENEDOR DE HITOS ACADÉMICOS */}
-        <div className="space-y-40">
+        <div className="space-y-20">
           {educationData.map((item, index) => {
             // Alternamos si va a la izquierda o derecha en pantallas de computadora
             const isEven = index % 2 === 0;
@@ -86,13 +86,13 @@ export default function EducationTimeline() {
               >
                 {/* Bloque del contenido de la tarjeta */}
                 <motion.div 
-                  className="w-90% md:w-2/5 pl-12 md:pl-0 md:px-8"
+                  className="w-90% md:w-3/7 pl-12 md:pl-0 md:px-8"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                  <div className=" hover:border-neutral-700 transition-colors  p-4 md:p-6 bg-black/50 backdrop-blur-sm border border-gray-700 rounded-xl">
+                  <div className=" hover:border-purple-700 transition-colors  p-4 md:p-6 bg-black/50 backdrop-blur-sm border border-gray-700 rounded-xl pointer-events-auto ">
                     {/* Año resaltado con tu fuente principal */}
                     <span className="font-ArraySemiBold text-xl text-neutral-400 block mb-2">
                       {item.year}
@@ -116,8 +116,8 @@ export default function EducationTimeline() {
                 </motion.div>
 
                 {/* El círculo central indicador */}
-                <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 top-6 z-10">
-                  <div className="w-5 h-5 rounded-full bg-black border-4 border-white shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
+                <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 top-6 z-10  ">
+                  <div className="w-5 h-5 rounded-full bg-black border-4 border-white  " />
                 </div>
               </div>
             );
