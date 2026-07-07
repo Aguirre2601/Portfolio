@@ -1,41 +1,41 @@
-import { useState } from 'react';
+import { useState, FormEvent  } from 'react';
 import ButtonMinimalist from "@/components/ui/Buttons/ButtonMinimalist";
 
 export default function ContactForm() {
     // Estados para manejar el proceso de envío y los mensajes
     const [estado, setEstado] = useState("");
     const [enviando, setEnviando] = useState(false);
+    
+  // 2. Añade el tipo FormEvent<HTMLFormElement> al parámetro event
+  const manejarEnvio = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); 
+    setEnviando(true);
+    setEstado("");
 
-    const manejarEnvio = async (event) => {
-        event.preventDefault(); // Evita que la página se recargue o redirija a Formspree
-        setEnviando(true);
-        setEstado("");
+    const formulario = event.currentTarget; // En TS es más seguro usar currentTarget
+    const datos = new FormData(formulario);
 
-        const formulario = event.target;
-        const datos = new FormData(formulario);
-
-        try {
-            const respuesta = await fetch("https://formspree.io/f/xwvdjvwz", {
-                method: "POST",
-                body: datos,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (respuesta.ok) {
-                setEstado("success");
-                formulario.reset(); // Limpia los campos del formulario tras el éxito
-            } else {
-                setEstado("error");
-            }
-        } catch (error) {
-            setEstado("error");
-        } finally {
-            setEnviando(false);
+    try {
+      const respuesta = await fetch("https://formspree.io", {
+        method: "POST",
+        body: datos,
+        headers: {
+          'Accept': 'application/json'
         }
-    };
+      });
 
+      if (respuesta.ok) {
+        setEstado("success");
+        formulario.reset(); 
+      } else {
+        setEstado("error");
+      }
+    } catch (error) {
+      setEstado("error");
+    } finally {
+      setEnviando(false);
+    }
+  };
     return (
         <div className="w-full max-w-xl mx-auto">
             <form onSubmit={manejarEnvio} className="flex flex-col gap-4">
