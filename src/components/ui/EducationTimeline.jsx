@@ -55,9 +55,9 @@ export default function EducationTimeline() {
   return (
     <section 
       ref={containerRef} 
-      className="relative max-w-4xl mx-auto px-4 py-16 bg-black text-white min-h-screen "
+      className="relative max-w-4xl m-10 mx-auto bg-black text-white min-h-screen "
     >
-      <h2 className="font-ArraySemiBold  mb-20 uppercase tracking-wider    text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100   font-bold text-4xl md:text-6xl p-6 text-center  ">
+      <h2 className="font-ArraySemiBold uppercase tracking-wider text-transparent bg-clip-text bg-linear-to-br  from-slate-50 via-gray-400 to-slate-100 font-bold text-4xl md:text-6xl text-center m-20 ">
         Mi Formación
       </h2>
 
@@ -67,7 +67,7 @@ export default function EducationTimeline() {
 
         {/* LÍNEA DE PROGRESO (Blanca, se llena con el scroll) */}
         <motion.div 
-          className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-2  rounded-full origin-top   bg-linear-to-t from-purple-500 from-5% via-violet-800 via-45% to-violet-950 to-90%"
+          className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-2  rounded-full origin-top   bg-linear-to-t from-purple-500 from-10% via-violet-950 via-45% to-mauve-950 to-90%"
           style={{ scaleY }}
         />
 
