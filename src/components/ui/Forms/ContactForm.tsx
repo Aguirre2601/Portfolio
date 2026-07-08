@@ -42,6 +42,7 @@ export default function ContactForm() {
                 <input
                     name="name"
                     type="text"
+                    autoComplete='name'
                     placeholder={enviando ? "Sending..." : "Your full name here."}
                     className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600 transition-colors relative z-12 pointer-events-auto w-9/10"
                     required
@@ -51,6 +52,7 @@ export default function ContactForm() {
                 <input
                     name="email"
                     type="email"
+                    autoComplete='email'
                     placeholder={enviando ? "Sending..." : "Your email here."}
                     className="p-3 text-lg rounded-lg bg-black/40 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-purple-600 transition-colors relative z-12 pointer-events-auto w-9/10"
                     required
