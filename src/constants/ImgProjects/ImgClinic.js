@@ -1,3 +1,3 @@
-export const ImgClinic = [
-    './projects/Clinic/Clinic.png'
-]
+export const ImgClinic = [ 
+    {id:1, src:'./projects/Clinic/Clinic.png', alt:"Indeed"},
+];

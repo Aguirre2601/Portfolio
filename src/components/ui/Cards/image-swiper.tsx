@@ -6,13 +6,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Cards/button'
+import { string } from 'three/tsl'
+import { ClassArray } from 'clsx'
 
-
+/*
 interface ImageSwiperProps extends React.HTMLAttributes<HTMLDivElement> {
-  images: string[]
-}
+   images : string[];
+}*/
 
-export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
+type Images = {
+    id:  number;
+    src: string;
+    alt:string;
+}[];
+type ImageSwiperPorps = {
+  images: Images;
+  className: string;
+  props? :string;
+
+};
+
+export function ImageSwiper({ images, className , ...props }: ImageSwiperPorps) {
   const [imgIndex, setImgIndex] = React.useState(0)
   const dragX = useMotionValue(0)
 
@@ -39,10 +53,11 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="pointer-events-auto h-8 w-8 rounded-full bg-white/80 opacity-0 transition-opacity group-hover:opacity-100"
+              className="pointer-events-auto h-8 w-8 rounded-full bg-white/80 opacity-0 transition-opacity group-hover:opacity-100  hover:cursor-pointer"
               onClick={() => setImgIndex((prev) => prev - 1)}
+              aria-label='Previous image'
             >
-              <ChevronLeft className="h-4 w-4 text-neutral-600" />
+              <ChevronLeft className="h-4 w-4 text-neutral-600" aria-hidden= "true"  />
             </Button>
           </div>
         )}
@@ -52,10 +67,11 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
             <Button
               variant="ghost" 
               size="icon"
-              className="pointer-events-auto h-8 w-8 rounded-full bg-white/80 opacity-0 transition-opacity group-hover:opacity-100"
+              className="pointer-events-auto h-8 w-8 rounded-full bg-white/80 opacity-0 transition-opacity group-hover:opacity-100 hover:cursor-pointer"
               onClick={() => setImgIndex((prev) => prev + 1)}
+              aria-label='Next image'
             >
-              <ChevronRight className="h-4 w-4 text-neutral-600" />
+              <ChevronRight className="h-4 w-4 text-neutral-600" aria-hidden= "true" />
             </Button>
           </div>
         )}
@@ -83,12 +99,12 @@ export function ImageSwiper({ images, className, ...props }: ImageSwiperProps) {
         onDragEnd={onDragEnd}
         transition={{ damping: 18, stiffness: 90, type: 'spring', duration: 0.2 }}
         className=" flex h-full items-center rounded-[inherit] ">
-        {images.map((src, i) => {
+        {images.map((img, index) => {
           return (
             <motion.div
-              key={i}
+              key={img.id}
               className="h-full w-full shrink-0 overflow-hidden bg-neutral-800 object-cover first:rounded-l-[inherit] last:rounded-r-[inherit]">
-              <img loading="lazy"  src={src} className="pointer-events-none h-full w-full object-cover" />
+              <img loading="lazy"  src={img.src} alt={img.alt} className="pointer-events-none h-full w-full object-cover" />
             </motion.div>
           )
         })}
