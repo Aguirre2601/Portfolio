@@ -5,6 +5,8 @@ import {ImgFrontend} from '@/constants/ImgFrontend';
 import {ImgTool} from '@/constants/ImgTool';
 import GlowCard from '@/components/ui/Shadows/GlowCard';
 import SoftSkill from '@/components/ui/SoftSkill'
+import miImagen  from '@/assets/images/FINAL.png'; 
+import Image from 'next/image';
 
 export default function Grid() {
     const [isMounted, setIsMounted] = useState(false);
@@ -35,14 +37,11 @@ export default function Grid() {
             </div>
             <GlowCard className="w-3 h-3 p-0.5 sm:w-13 sm:h-10 sm:p-1 md:w-20px md:h-20px md:p-3" > 
                 <div className="bg-transparent rounded-xl p-1 md:p-6 relative select-none ">
-                    <img
-                    src="/src/assets/images/FINAL.png"
+                    <Image
+                    src={miImagen}
                     alt="Foto de Mariela Aguirre sonriente"
-                    // Bloquea el clic derecho
                     onContextMenu={(e) => e.preventDefault()}
-                    // Bloquea el arrastrar la imagen a otra pestaña o al escritorio
-                    onDragStart={(e) => e.preventDefault()}
-                    className="pointer-events-none"  />
+                    className="pointer-events-none"/>
                 </div>  
             </GlowCard>
 
