@@ -28,20 +28,18 @@ export default function Grid() {
     return (
         <div className="grid grid-cols-3 gap-4">
             {/**foto */}
-            <div className="col-span-1 row-span-2 border border-gray-700 rounded-xl bg-transparent backdrop-blur-sm flex p-2 justify-center"  > 
-                <div className="bg-transparent rounded-xl relative select-none w-xl md:w-base ">
-                    <GlowCard>
-                        <Image
+            <div className="col-span-1 row-span-1   md:col-span-1    lg:col-span-1 lg:row-span-2 border border-gray-700 rounded-xl bg-transparent backdrop-blur-sm flex p-2 justify-center"  > 
+                <div className="bg-transparent select-none w-xl md:w-base
+                overflow-hidden relative "> 
+                    <Image
                     src={miImagen}
                     alt="Foto de Mariela Aguirre sonriente"
                     onContextMenu={(e) => e.preventDefault()}
-                    className="pointer-events-none"/>
-                    </GlowCard>
-                    
+                    className="pointer-events-none"/> 
                 </div>  
             </div>
             {/**txt */}
-            <div className="col-span-2 row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
+            <div className="col-span-2  row-span-3  md:col-span-2    lg:col-span-2 lg:row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
                 <h2 className="text-sm sm:text-xs md:text-3xl m-0.5 md:m-2 font-semibold text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100 font-satoshi  flex flex-col lg:flex-row">Hola! soy<GlowText text="Mariela" /></h2> 
                 <h3 className="text-xs sm:text-xs md:text-2xl m-2 font-medium text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100 font-satoshi">Tengo 24 años y soy de Argentina.</h3>
                 <p className="text-xs sm:text-sm md:text-xl m-2 text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100 font-satoshi font-normal">A lo largo de mi trayectoria, trabaje con C# en backend e integré de forma robusta React, SQL, PHP y TypeScript.</p>
@@ -50,8 +48,8 @@ export default function Grid() {
                 <p className="text-xs sm:text-sm md:text-xl m-2 text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100 font-satoshi font-normal">Actualmente experimento con Python y proyectos personales, continuando mi capacitación y adquiriendo nuevos conocimientos.</p>
             </div>
             {/**frontend */}
-            <div className="col-span-1 row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm   " >
-                <h2 className="text-sm sm:text-xs md:text-3xl  m-2 font-semibold font-satoshi  flex flex-col min-[1025px]:flex-row  text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100">Lenguajes de <span className="  ml-2 font-ArraySemiBold">  Frontend</span></h2> 
+            <div className="col-span-1    md:col-span-2    lg:col-span-1 lg:row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm   " >
+                <h2 className="text-sm sm:text-xs md:text-3xl  m-2 font-semibold font-satoshi  flex flex-col min-[1025px]:flex-row  text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100">Lenguajes de <span className="  md:ml-2 font-ArraySemiBold">  Frontend</span></h2> 
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6 p-2">
                     {ImgFrontend.map((img, index) => (
                         <GlowCard key={index} className="w-3 h-3 p-0.5 sm:w-15 sm:h-15 sm:p-1 md:w-20px md:h-20px md:p-3" >
@@ -61,8 +59,8 @@ export default function Grid() {
                 </div>
             </div>
             {/**backend */}
-            <div className="col-span-1 row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
-                <h2 className="text-sm sm:text-xs md:text-3xl m-2 font-semibold font-satoshi  flex flex-col min-[1025px]:flex-row  text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100">Lenguajes de   <span className="  ml-2 font-ArraySemiBold">Backend</span></h2> 
+            <div className="col-span-1    md:col-span-1     lg:col-span-1 lg:row-span-1 p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
+                <h2 className="text-sm sm:text-xs md:text-3xl m-2 font-semibold font-satoshi  flex flex-col min-[1025px]:flex-row  text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100">Lenguajes de   <span className="  md:ml-2 font-ArraySemiBold">Backend</span></h2> 
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6 p-2 ">
                     {ImgBackend.map((img, index) => (
                         <GlowCard key={index} className="w-3 h-3 p-0.5 sm:w-15 sm:h-15 sm:p-1 md:w-20px md:h-20px md:p-3" >
@@ -72,14 +70,14 @@ export default function Grid() {
                 </div>
             </div>
             {/**skill */}
-            <div className="col-span-2  p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm   " >
+            <div className="col-span-3      md:col-span-2    lg:col-span-2  p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm   " >
                 <h2 className="text-sm sm:text-xs md:text-3xl  m-2 font-semibold font-satoshi  flex flex-col min-[1025px]:flex-row  text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100"><span className="  ml-2 font-ArraySemiBold">SOFT SKILL</span></h2> 
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6 p-2">
                     <SoftSkill/>
                 </div>
             </div> 
             {/**Tools */}
-            <div className="col-span-1  p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
+            <div className="col-span-3    md:col-span-1     lg:col-span-1  p-1 md:p-6 border  border-gray-700 rounded-xl  bg-transparent backdrop-blur-sm " >
                 <h2 className="text-sm sm:text-xs md:text-3xl m-2 font-semibold font-satoshi  flex flex-row text-transparent bg-clip-text bg-linear-to-br from-slate-50 via-gray-400 to-slate-100 ">Mis    <span className="  ml-2 font-ArraySemiBold">  Tools</span></h2> 
                 <div className="flex flex-wrap gap-1 md:gap-4 mt-1 md:mt-6 p-2 ">
                 {ImgTool.map((img, index) => (
